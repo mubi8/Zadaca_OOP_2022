@@ -3,7 +3,7 @@
 #include<list>
 
 
-std::list<int> partition(std::list<int>::const_iterator begin, 
+std::list<int> partitionn(std::list<int>::const_iterator begin, 
                          std::list<int>::const_iterator end,
                          std::function<bool(int)> predicate) {
     std::list<int> result;
@@ -28,7 +28,7 @@ int main(){
     std::cout << e << " ";
     }
     std::cout << std::endl << std::endl;
-    auto result = partition(numbers.cbegin(), numbers.cend(),
+    auto result = partitionn(numbers.cbegin(), numbers.cend(),
                                       [](int num) { return !(num % 2); });
     
         for (auto &e : result) {
@@ -42,7 +42,7 @@ int main(){
     }
     std::cout << std::endl << std::endl;
 
-    result=partition(numbers.cbegin(),numbers.cend(),[](int n){
+    result=partitionn(numbers.cbegin(),numbers.cend(),[](int n){
                                                     return n>0;});
 
     for (auto &e : result) {
